@@ -57,7 +57,7 @@ public class validaLogin extends HttpServlet {
         if(con.Autenticacion(user, pass)){
             response.sendRedirect("home.jsp?nombre="+user);
         }else{
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("index.jsp?error=true");
         };
         
         //

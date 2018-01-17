@@ -15,7 +15,12 @@
         
     </head>
     <body>
+        <%String val = request.getParameter("error");%>
+        <%val = val == null ? "none" : "true";%>
         <h1>Login Page</h1>
+        <div style="display:<%= val%>;">
+            <p>Error de autenticación, inténtelo de nuevo</p>
+        </div>
         <div>
             <form action="autenticar" method="POST">
                 <label for="user">Usuario</label>
